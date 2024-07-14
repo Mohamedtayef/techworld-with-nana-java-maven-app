@@ -7,3 +7,6 @@ export DOCKER_PWD=$3
 echo $DOCKER_PWD | docker login -u $DOCKER_USER --password-stdin
 docker-compose -f docker-compose.yml up --detach
 echo "Success"
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
